@@ -30,7 +30,7 @@ export function BottomNav() {
     const { Icon } = TABS.find(t => t.tab === tab)!;
     return (
       <div className={s.nav}>
-        <MiniBar lead={<Icon color="var(--text)" />} onLead={() => setNavCollapsed(false)} onAi={() => openAiChat()} onPlus={openQuickAdd} />
+        <MiniBar lead={<Icon color="var(--text)" />} leadLabel="Show navigation" onLead={() => setNavCollapsed(false)} onAi={() => openAiChat()} onPlus={openQuickAdd} />
       </div>
     );
   }
@@ -38,7 +38,7 @@ export function BottomNav() {
   const tabButton = ({ tab: t, label, activeColor, Icon }: (typeof TABS)[number]) => {
     const color = tab === t ? activeColor : 'var(--text-ter)';
     return (
-      <div key={t} className={s.tab} onClick={() => setTab(t)}>
+      <div key={t} className={s.tab} onClick={() => setTab(t)} role="tab" aria-label={label} aria-selected={tab === t}>
         <Icon color={color} />
         <div className={s.tabLabel} style={{ color }}>{label}</div>
       </div>
@@ -75,10 +75,10 @@ export function BottomNav() {
 }
 
 /** The minimal bar: leading icon, AI button, plus. Also used under tier-3 pages. */
-export function MiniBar({ lead, onLead, onAi, onPlus }: { lead: ReactNode; onLead: () => void; onAi: () => void; onPlus: () => void }) {
+export function MiniBar({ lead, leadLabel, onLead, onAi, onPlus }: { lead: ReactNode; leadLabel: string; onLead: () => void; onAi: () => void; onPlus: () => void }) {
   return (
     <div className={s.mini}>
-      <div className={s.miniLead} onClick={onLead}>{lead}</div>
+      <div className={s.miniLead} onClick={onLead} aria-label={leadLabel}>{lead}</div>
       <div className={s.miniAi} onClick={onAi} aria-label="Ask AI"><Sparkle color="#fff" /></div>
       <div className={s.miniPlus} onClick={onPlus} aria-label="Add"><Plus size={20} /></div>
     </div>

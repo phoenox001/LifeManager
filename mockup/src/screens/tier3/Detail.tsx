@@ -31,7 +31,7 @@ export function Detail() {
         <div style={{ height: 58 }} />
         <div className={s.page}>
           <div className={s.topRow}>
-            <div className={s.back} onClick={st.closeDetail}>
+            <div className={s.back} onClick={st.closeDetail} role="button" aria-label="Back">
               <ChevronLeft />
               <div className="ellipsis">{BACK_LABEL[d.kind]}</div>
             </div>
@@ -48,6 +48,7 @@ export function Detail() {
       <div className={s.bar}>
         <MiniBar
           lead={<ChevronLeft />}
+          leadLabel="Close"
           onLead={st.closeDetail}
           onAi={() => st.openAiChat(container ? 'About ' + displayName(st, d.kind, d.id, container.name) + ' — ' : undefined)}
           onPlus={st.openQuickAdd}

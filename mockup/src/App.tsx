@@ -31,12 +31,18 @@ export function App() {
   const Screen = SCREENS[tab];
 
   // Scrolling down collapses the nav to the mini bar; scrolling up restores it.
+  // Collapsing the nav makes the scroll area taller; at the bottom of a page the
+  // browser then clamps scrollTop upwards by itself. That clamp is not the user
+  // scrolling up, so it must not re-expand the nav (which would loop forever).
   const onScroll = (e: React.UIEvent<HTMLDivElement>) => {
-    const top = e.currentTarget.scrollTop;
+    const el = e.currentTarget;
+    const top = el.scrollTop;
     const delta = top - lastTop.current;
     lastTop.current = top;
-    if (delta > 2 && top > 30 && !navCollapsed) setNavCollapsed(true);
-    else if (delta < -2 && navCollapsed) setNavCollapsed(false);
+    const pinnedToBottom = top + el.clientHeight >= el.scrollHeight - 1;
+    const collapse = delta > 2 && top > 30 && !navCollapsed;
+    const expand = delta < -2 && navCollapsed && !pinnedToBottom;
+    if (collapse || expand) setNavCollapsed(collapse);
   };
 
   return (
@@ -46,24 +52,25 @@ export function App() {
           className={'theme-' + theme}
           style={{ position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', overflow: 'hidden', background: 'var(--bg)', color: 'var(--text)', fontFamily: "'Inter', -apple-system, sans-serif" }}
         >
-          <div style={{ flex: 1, overflowY: 'auto', position: 'relative' }} onScroll={onScroll}>
+          <div style={{ flex: 1, overflowY: 'auto', position: 'relative', overflowAnchor: 'none' }} onScroll={onScroll}>
             <div style={{ height: 58 }} />
             <Screen key={tab} />
           </div>
           <BottomNav />
 
-          <Detail />
-          <TodoPeek />
+          {/* Layers in stacking order (see z in components/ui). */}
           <MyWeek />
-          <CalendarOverlay />
-          <AllProjects />
-          <AllFocuses />
           <AllTodos />
           <Inbox />
+          <AllProjects />
+          <AllFocuses />
           <AccountSubScreen />
+          <CalendarOverlay />
+          <Detail />
           <AiChat />
           <QuickAddSheet />
           <RowActionSheet />
+          <TodoPeek />
           <Toast />
         </div>
       </IOSDevice>
