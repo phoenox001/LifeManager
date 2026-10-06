@@ -1,0 +1,89 @@
+/* Design tokens. Two palettes, applied by a class on the app root. */
+.theme-dark {
+  --bg: #111113;
+  --surface: #1c1c1e;
+  --surface2: #26262a;
+  --border: rgba(255, 255, 255, 0.09);
+  --text: #f4f3f1;
+  --text-sec: rgba(244, 243, 241, 0.75);
+  --text-ter: rgba(244, 243, 241, 0.62);
+  --scrim: rgba(0, 0, 0, 0.6);
+  --accent1: oklch(0.68 0.15 35);
+  --accent1-soft: oklch(0.68 0.15 35 / 16%);
+  --accent2: oklch(0.72 0.1 280);
+  --accent2-soft: oklch(0.72 0.1 280 / 16%);
+  --amber: oklch(0.72 0.13 70);
+  --proj: oklch(0.72 0.09 210);
+  --proj-soft: oklch(0.72 0.09 210 / 16%);
+  --proj-fill-ink: #111113;
+  --focus: oklch(0.76 0.09 150);
+  --focus-soft: oklch(0.76 0.09 150 / 16%);
+  --focus-fill: oklch(0.76 0.09 150);
+  --focus-fill-ink: #111113;
+  --urgent: oklch(0.66 0.21 25);
+  --archived-bg: #17161b;
+}
+
+.theme-light {
+  --bg: #f6f5f2;
+  --surface: #ffffff;
+  --surface2: #eeece6;
+  --border: rgba(20, 20, 20, 0.09);
+  --text: #1c1b1a;
+  --text-sec: rgba(28, 27, 26, 0.72);
+  --text-ter: rgba(28, 27, 26, 0.58);
+  --scrim: rgba(0, 0, 0, 0.35);
+  --accent1: oklch(0.6 0.15 35);
+  --accent1-soft: oklch(0.6 0.15 35 / 12%);
+  --accent2: oklch(0.62 0.1 280);
+  --accent2-soft: oklch(0.62 0.1 280 / 12%);
+  --amber: oklch(0.65 0.13 70);
+  --proj: oklch(0.56 0.09 210);
+  --proj-soft: oklch(0.56 0.09 210 / 12%);
+  --proj-fill-ink: #ffffff;
+  --focus: oklch(0.58 0.09 150);
+  --focus-soft: oklch(0.58 0.09 150 / 12%);
+  --focus-fill: oklch(0.46 0.09 150);
+  --focus-fill-ink: #ffffff;
+  --urgent: oklch(0.55 0.21 25);
+  --archived-bg: #efebe2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: #e9e7e2;
+  font-family: Inter, -apple-system, sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+input,
+textarea {
+  font-family: inherit;
+}
+
+/* ---------- small shared utilities ---------- */
+
+.clickable {
+  cursor: pointer;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Divided rows inside a card: hairline between rows. */
+.row-divider {
+  border-bottom: 1px solid var(--border);
+}

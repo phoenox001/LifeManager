@@ -1,0 +1,114 @@
+.nav {
+  flex-shrink: 0;
+  position: relative;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.pillRow {
+  padding: 12px 20px 8px;
+}
+
+/*
+ * The pill is notched by a circle concentric with the plus button
+ * (button radius 27px + 6px clearance), centred 58px below the pill's top.
+ */
+.aiPill {
+  height: 50px;
+  border-radius: 25px;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 8px 0 16px;
+  -webkit-mask-image: radial-gradient(circle 33px at 50% 58px, transparent 99%, #000 100%);
+  mask-image: radial-gradient(circle 33px at 50% 58px, transparent 99%, #000 100%);
+}
+
+.aiInput {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font-size: 14.5px;
+  outline: none;
+}
+
+.tabRow {
+  padding: 2px 20px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tab {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.tabLabel {
+  font-size: 10.5px;
+  font-weight: 600;
+}
+
+.plus {
+  position: absolute;
+  top: 43px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 27px;
+  background: var(--accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.28);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mini {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.miniLead {
+  width: 44px;
+  height: 44px;
+  margin: -11px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.miniAi {
+  width: 34px;
+  height: 34px;
+  border-radius: 17px;
+  background: var(--accent2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.miniPlus {
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  background: var(--accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
