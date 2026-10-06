@@ -1,0 +1,295 @@
+.page {
+  padding: 0 20px 28px;
+}
+
+.bigTitle {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.titleBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.stack12 {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bigCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 16px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.tag {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+.subTer {
+  font-size: 11.5px;
+  color: var(--text-ter);
+}
+
+.dot6 {
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.smallPill {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface2);
+  border-radius: 9px;
+  padding: 6px 11px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.caption {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-ter);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.seeAll {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 15px 16px;
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- dashboard ---------- */
+.dashHeader {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.dateDrop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+.dateLabel {
+  font-size: 13px;
+  color: var(--text-sec);
+  font-weight: 500;
+}
+.avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  background: var(--accent1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+}
+.glanceRow {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+}
+.glanceCell {
+  flex: 1;
+  min-width: 0;
+  background: var(--surface2);
+  border-radius: 14px;
+  padding: 13px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+}
+.glanceLabel {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text);
+}
+.glanceSub {
+  font-size: 11.5px;
+  color: var(--text-ter);
+  margin-top: 2px;
+}
+.insight {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  background: var(--accent2-soft);
+}
+.insightBadge {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+  background: var(--accent2);
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Wraps, capped at four lines. */
+.insightText {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  color: var(--text);
+  padding-top: 2px;
+  max-height: 67px;
+  overflow: hidden;
+}
+.insightOpen {
+  flex-shrink: 0;
+  margin-top: 4px;
+  cursor: pointer;
+  display: flex;
+}
+.scheduleRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+.scheduleTime {
+  width: 44px;
+  flex-shrink: 0;
+  font-size: 12.5px;
+  color: var(--text-sec);
+  font-weight: 600;
+}
+.scheduleFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 11px 16px;
+}
+.todoRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+  cursor: pointer;
+}
+
+/* ---------- projects / focuses ---------- */
+.statNumber {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--proj);
+}
+.statLabel {
+  font-size: 11.5px;
+  color: var(--text-sec);
+}
+.lastBox {
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--surface2);
+  margin-bottom: 12px;
+}
+.cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.momentumRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px 14px;
+}
+.logRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  cursor: pointer;
+}
+.logChip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 11px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.aiBox {
+  display: flex;
+  gap: 8px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: var(--accent2-soft);
+}
+
+/* ---------- account ---------- */
+.accountGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 15px;
+}
+.tileTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+.tileSub {
+  font-size: 11.5px;
+  color: var(--text-sec);
+  margin-top: 2px;
+}

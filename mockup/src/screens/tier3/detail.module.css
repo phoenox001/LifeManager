@@ -1,0 +1,312 @@
+.screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+.scroll {
+  flex: 1;
+  overflow-y: auto;
+}
+.page {
+  padding: 0 20px 26px;
+}
+.bar {
+  flex-shrink: 0;
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+.back {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-sec);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 0;
+}
+.edit {
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  padding: 4px 0;
+}
+
+.archivedBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+.restore {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface2);
+  border-radius: 10px;
+  padding: 7px 12px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 14px;
+}
+.iconHero {
+  width: 84px;
+  height: 84px;
+  border-radius: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.typeChip {
+  display: inline-block;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 8px;
+  margin-bottom: 6px;
+}
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  line-height: 1.15;
+}
+.renameInput {
+  width: 100%;
+  font-size: 21px;
+  font-weight: 700;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 11px;
+  outline: none;
+}
+.sub {
+  font-size: 13px;
+  color: var(--text-sec);
+  margin-top: 3px;
+}
+
+.aiText {
+  font-size: 13.5px;
+  line-height: 1.45;
+  text-wrap: pretty;
+  white-space: pre-line;
+}
+.more {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent2);
+  margin-top: 8px;
+  cursor: pointer;
+}
+
+/* ---------- edit mode ---------- */
+.editRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--border);
+}
+.handle {
+  width: 26px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: grab;
+  flex-shrink: 0;
+  touch-action: none;
+}
+.addChip {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 9px 13px;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  cursor: pointer;
+}
+.settingCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  cursor: pointer;
+}
+.destroyButton {
+  flex: 1;
+  text-align: center;
+  padding: 13px;
+  border-radius: 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* ---------- module stack ---------- */
+.module {
+  margin-bottom: 22px;
+}
+.moduleHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.moduleAll {
+  font-size: 13px;
+  color: var(--text-sec);
+  cursor: pointer;
+}
+.emptyCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+}
+.emptyPlus {
+  width: 28px;
+  height: 28px;
+  border-radius: 14px;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.listRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.fileIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: var(--surface2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.logButton {
+  padding: 8px 13px;
+  border-radius: 11px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- note & document ---------- */
+.linkChip {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 12px;
+}
+.docBanner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--accent2-soft);
+  border-radius: 16px;
+  padding: 12px 14px;
+  margin-bottom: 16px;
+}
+.docText {
+  width: 100%;
+  min-height: 260px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text);
+  outline: none;
+  resize: none;
+}
+
+/* ---------- peek sheet ---------- */
+.dueChip {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ownerBox {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.moveChip {
+  font-size: 12.5px;
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 11px;
+  background: var(--surface2);
+  color: var(--text-sec);
+  cursor: pointer;
+}
+.peekButton {
+  flex: 1;
+  text-align: center;
+  padding: 14px;
+  border-radius: 15px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-size: 14.5px;
+  font-weight: 600;
+  cursor: pointer;
+}
